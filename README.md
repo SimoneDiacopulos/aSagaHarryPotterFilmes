@@ -1,8 +1,12 @@
 #aSagaHarryPotter
 #ImersaoDevAluraGoogle
-link publicado https://simonediacopulos.github.io/aSagaHarryPotterFilmes/ 
-link do projeto https://github.com/SimoneDiacopulos/aSagaHarryPotterFilmes
-# 📜 Comentário Detalhado do Projeto: A Saga Harry Potter - Filmes
+link publicado 
+https://simonediacopulos.github.io/aSagaHarryPotterFilmes/ 
+
+link do projeto 
+https://github.com/SimoneDiacopulos/aSagaHarryPotterFilmes 
+
+# 📜 Descriçao do Projeto: A Saga Harry Potter - Filmes
 
 Este projeto é uma vitrine de desenvolvimento **Front-End**, focada na apresentação envolvente e responsiva da cronologia e detalhes dos filmes da franquia Harry Potter. 
 A construção priorizou a performance, a manutenibilidade do código e a experiência do usuário em diferentes dispositivos.
