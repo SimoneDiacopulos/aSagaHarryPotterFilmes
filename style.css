@@ -1,0 +1,384 @@
+/* --- Variáveis de Cores --- */
+:root {
+    --bg-color: #050505;
+    --card-bg: #0f0f0f;
+    --gold: #d4af37;
+    --gold-glow: #f9d768;
+    --text-color: #e0e0e0;
+    --overlay-black: rgba(0, 0, 0, 0.9);
+}
+
+/* --- Reset Básico --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: center;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Fontes de Título */
+h1, h2, h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* --- Varinha Mágica --- */
+#magic-wand {
+    position: absolute; /* Posição relativa ao header */
+    left: 176px; /* Posiciona para fora da borda esquerda */
+    top: 40px; /* Distância do topo */
+    transform: rotate(-25deg); /* Rotaciona a varinha */
+    width: 226px; /* Tamanho ajustado para o header */
+    z-index: 999;
+    transition: all 0.4s ease;
+    mix-blend-mode: screen; /* Remove o fundo preto e revela a cor da varinha */
+    filter: sepia(40%); /* Adiciona um tom mais quente e amadeirado */
+    opacity: 0.6; /* Deixa a varinha um pouco mais sutil */
+    cursor: pointer;
+}
+
+#magic-wand:hover {
+    transform: rotate(-25deg) scale(1.15);
+    filter: contrast(1.2) brightness(1.2);
+    opacity: 1;
+}
+
+/* Efeito de luz na ponta da varinha */
+#magic-wand::after {
+    content: '';
+    position: absolute;
+    /* Ajuste 'top' e 'left' para posicionar a luz na ponta da sua imagem */
+    top: -5px; 
+    left: -5px;
+    width: 20px;
+    height: 20px;
+    background: #f1da05;
+    border-radius: 50%;
+    box-shadow: 0 0 15px 8px #a89d06, 0 0 25px 15px var(--gold-glow), 0 0 40px 25px #fff;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+/* Ativa o efeito de luz no hover do corpo da página */
+body:hover #magic-wand::after {
+    opacity: 1;
+}
+
+/* --- Coruja no Cabeçalho --- */
+#header-owl {
+    position: absolute;
+    right: 160px;
+    top: 100px;
+    width: 260px;
+    transform: rotate(15deg);
+    z-index: 998; /* Abaixo da varinha */
+    mix-blend-mode: screen; /* Mescla a imagem com o fundo, removendo o preto */
+    opacity: 0.6;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+#header-owl:hover {
+    transform: rotate(15deg) scale(1.36);
+    filter: contrast(1.2) brightness(1.2);
+    opacity: 1;
+}
+
+
+/* --- Cabeçalho --- */
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background: radial-gradient(circle, #1a1a1a 0%, #000000 100%);
+    border-bottom: 2px solid var(--gold);
+    position: relative; /* Necessário para posicionar a varinha dentro dele */
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+}
+
+header h1 {
+    font-size: 3rem;
+    text-shadow: 0 0 10px var(--gold);
+}
+
+.subtitle {
+    font-size: 1.4rem;
+    color: #aaa;
+    margin-top: 10px;
+    font-style: normal; 
+    font-weight: bold; /* Adiciona o negrito */
+}
+
+/* --- Search Container --- */
+.search-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Alinha os itens verticalmente */
+    gap: 10px;
+    padding: 0 20px;
+}
+
+.home-button {
+    padding: 12px 30px;
+    background: var(--gold);
+    color: #000;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    text-decoration: none; /* Remove o sublinhado do link */
+    white-space: nowrap; /* Impede que o texto quebre a linha */
+}
+
+.home-button:hover {
+    background: var(--gold-glow);
+    box-shadow: 0 0 15px var(--gold-glow);
+}
+
+#search-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--gold);
+    border-radius: 50px;
+    color: var(--text-color);
+    font-family: 'Lato', sans-serif;
+    transition: all 0.3s;
+}
+
+#search-input::placeholder {
+    color: #aaa;
+}
+
+#search-input:focus {
+    outline: none;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#search-button {
+    padding: 12px 30px;
+    background: var(--gold);
+    color: #000;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+#search-button:hover {
+    background: var(--gold-glow);
+    box-shadow: 0 0 15px var(--gold-glow);
+}
+
+/* --- Layout --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 40px 0;
+    justify-content: center; /* Centraliza os cards na grade quando há espaço sobrando */
+}
+
+/* --- Cartão do Filme (Card) --- */
+.movie-card {
+    background-color: var(--card-bg);
+    border: 1px solid #333;
+    border-radius: 3px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    display: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.movie-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--gold);
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+}
+
+.movie-card img {
+    width: 100%;
+    max-width: 400px; /* Limita a largura máxima da imagem */
+    height: 250px;
+    object-fit: cover;
+    object-position: center; /* Centraliza a imagem dentro do seu contêiner */
+    filter: brightness(0.8);
+    transition: filter 0.3s;
+}
+
+.movie-card:hover img {
+    filter: brightness(1.1);
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.btn-details {
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 10px 20px;
+    font-family: 'Cinzel', serif;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 0.3s;
+}
+
+.btn-details:hover {
+    background: var(--gold);
+    color: #000;
+    box-shadow: 0 0 10px var(--gold);
+}
+
+/* --- Modal --- */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    z-index: 1000;
+    left: 20px;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay-black);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #111;
+    border: 2px solid var(--gold);
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    animation: fadeIn 0.4s ease;
+    box-shadow: 0 0 50px rgba(212, 175, 55, 0.3);
+}
+
+/* Estilos para o modal de "Não Encontrado" */
+.not-found-content {
+    max-width: 500px;
+    padding: 40px;
+    text-align: center;
+}
+
+#not-found-message {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    color: var(--gold);
+    text-shadow: 0 0 10px var(--gold-glow), 0 0 15px var(--gold);
+    line-height: 1.5;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.close-btn {
+    color: var(--gold);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #fff;
+}
+
+.modal-body {
+    margin-top: 20px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporção 16:9 */
+    height: 0;
+    margin-bottom: 20px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #333;
+}
+
+.modal-info {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.modal-info strong {
+    color: var(--gold);
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 40px;
+    border-top: 1px solid var(--gold);
+    color: var(--gold);
+    font-size: 0.9rem;
+    font-family: 'Cinzel', serif;
+    font-weight: bold; /* Deixa o texto em negrito */
+    text-shadow: 0 0 8px var(--gold-glow); /* Adiciona o brilho dourado */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    header h1 { font-size: 2rem; }
+    .modal-content { width: 95%; }
+    .search-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 900px) {
+    #magic-wand {
+        width: 200px; /* Diminui a varinha em telas menores */
+        left: 10px;
+    }
+    #header-owl {
+        width: 150px; /* Diminui a coruja em telas menores */
+        right: -20px;
+    }
+}

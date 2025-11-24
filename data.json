@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Harry Potter e a Pedra Filosofal",
+    "year": 2001,
+    "director": "Chris Columbus",
+    "synopsis": "Harry Potter, um menino órfão, descobre em seu 11º aniversário que é um bruxo e é convidado a estudar na Escola de Magia e Bruxaria de Hogwarts.",
+    "poster": "https://media.themoviedb.org/t/p/w300_and_h450_face/4rtsbE9aQ1qw4gv7yYwaNYfWFoS.jpg",
+    "trailerId": "SFzft_2dcV0" 
+  },
+  {
+    "id": 2,
+    "title": "Harry Potter e a Câmara Secreta",
+    "year": 2002,
+    "director": "Chris Columbus",
+    "synopsis": "Harry ignora os avisos para não voltar a Hogwarts e descobre que uma força malévola está aterrorizando a escola e petrificando os alunos.",
+    "poster": "https://media.themoviedb.org/t/p/w300_and_h450_face/1TDLyxnP6NSeyA8KKgACmlChawd.jpg",
+    "trailerId": "SFzft_2dcV0"
+  },
+  {
+    "id": 3,
+    "title": "Harry Potter e o Prisioneiro de Azkaban",
+    "year": 2004,
+    "director": "Alfonso Cuarón",
+    "synopsis": "Harry descobre que Sirius Black, um perigoso prisioneiro, fugiu de Azkaban e está supostamente vindo atrás dele.",
+    "poster": "https://media.themoviedb.org/t/p/w300_and_h450_face/1HdMUghqlgOIvbsU9ZtO40IPRzl.jpg",
+    "trailerId": "2MBddxOUNSo"
+  },
+  {
+    "id": 4,
+    "title": "Harry Potter e o Cálice de Fogo",
+    "year": 2005,
+    "director": "Mike Newell",
+    "synopsis": "Harry é misteriosamente selecionado para competir no perigoso Torneio Tribruxo, enfrentando dragões e o retorno de Lord Voldemort.",
+    "poster": "https://media.themoviedb.org/t/p/w300_and_h450_face/5oWB3hjzyECRBAjgWkmZinxl9qA.jpg",
+    "trailerId": "cVKkL4O60IM"
+  },
+  {
+    "id": 5,
+    "title": "Harry Potter e a Ordem da Fênix",
+    "year": 2007,
+    "director": "David Yates",
+    "synopsis": "Com seu aviso sobre o retorno de Voldemort sendo ignorado, Harry treina um grupo de estudantes para a guerra bruxa iminente.",
+    "poster": "https://media.themoviedb.org/t/p/w300_and_h450_face/tIf9aUyNljda9MG1pjlOLHCZ3b0.jpg",
+    "trailerId": "ZkDCaxUNV3o"
+  },
+  {
+    "id": 6,
+    "title": "Harry Potter e o Enigma do Príncipe",
+    "year": 2009,
+    "director": "David Yates",
+    "synopsis": "Harry descobre um livro antigo de poções pertencente ao Príncipe Mestiço e começa a desvendar o passado sombrio de Voldemort.",
+    "poster": "https://media.themoviedb.org/t/p/w300_and_h450_face/1b50wj02qzCCeoXuDQpgRDc25e0.jpg",
+    "trailerId": "xqfiYZ6ohnQ"
+  },
+  {
+    "id": 7,
+    "title": "Harry Potter e as Relíquias da Morte: Parte 1",
+    "year": 2010,
+    "director": "David Yates",
+    "synopsis": "Harry, Rony e Hermione saem em uma missão perigosa para rastrear e destruir o segredo da imortalidade de Voldemort: as Horcruxes.",
+    "poster": "https://media.themoviedb.org/t/p/w300_and_h450_face/38zEwrBvLOkg0y6MF4uYYyImYjm.jpg",
+    "trailerId": "kmXjPbN-rYU"
+  },
+  {
+    "id": 8,
+    "title": "Harry Potter e as Relíquias da Morte: Parte 2",
+    "year": 2011,
+    "director": "David Yates",
+    "synopsis": "A batalha final entre as forças do bem e do mal. Harry enfrenta Voldemort em um duelo final pelo destino do mundo bruxo.",
+    "poster": "https://media.themoviedb.org/t/p/w300_and_h450_face/yD3VosOVW8WxPUzBDpEdzfv5pGx.jpg",
+    "trailerId": "qP8ZLHC00VM"
+  }
+]
