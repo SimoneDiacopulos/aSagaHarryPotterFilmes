@@ -33,7 +33,7 @@ h1, h2, h3 {
 /* --- Varinha Mágica --- */
 #magic-wand {
     position: absolute; /* Posição relativa ao header */
-    left: 76px; /* Posiciona para fora da borda esquerda */
+    left: 36px; /* Posiciona para fora da borda esquerda */
     top: 40px; /* Distância do topo */
     transform: rotate(-25deg); /* Rotaciona a varinha */
     width: 226px; /* Tamanho ajustado para o header */
@@ -75,7 +75,7 @@ body:hover #magic-wand::after {
 /* --- Coruja no Cabeçalho --- */
 #header-owl {
     position: absolute;
-    right: 60px;
+    right: 36px;
     top: 100px;
     width: 260px;
     transform: rotate(15deg);
